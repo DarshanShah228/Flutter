@@ -2,10 +2,19 @@ import 'package:flutter/material.dart';
 
 import 'grid_view.dart';
 
-class ButtonsExample extends StatelessWidget {
+class ButtonsExample extends StatefulWidget {
   ButtonsExample({super.key});
 
+  @override
+  State<ButtonsExample> createState() => _ButtonsExampleState();
+}
+
+class _ButtonsExampleState extends State<ButtonsExample> {
   TextEditingController name = TextEditingController();
+
+  String selectevalue="Select value";
+  //String selectevalueRadio="Male";
+  bool checkBox=false;
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +75,52 @@ class ButtonsExample extends StatelessWidget {
                 child: Text("SnakBar"),
               ),
             ),
+          ),
+
+          //drop-down button
+          DropdownButton(
+              value: selectevalue,
+              items: [
+                DropdownMenuItem(
+                  child: Text("Select value"),
+                  value: "Select value",
+                ),
+                DropdownMenuItem(
+                    child: Text("Apple"),
+                  value: "Apple",
+                ),
+                DropdownMenuItem(
+                    child: Text("Mango"),
+                  value: "Mango",
+                )
+              ],
+              onChanged: (value){
+                setState(() {
+                  selectevalue= value!;
+                });
+              }
+          ),
+
+          //radio button
+          // RadioListTile(
+          //   title: Text("Male"),
+          //     value: "Male",
+          //     groupValue: selectevalueRadio,
+          //   onChanged: (value){
+          //     setState(() {
+          //       selectevalueRadio=value!;
+          //     });
+          //   },
+          // ),
+
+          //checkbox
+          Checkbox(
+              value: checkBox,
+              onChanged: (vlaue){
+                setState(() {
+                  checkBox=vlaue!;
+                });
+              },
           ),
         ],
       ),

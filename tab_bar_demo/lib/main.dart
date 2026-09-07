@@ -37,11 +37,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      //home: ButtonsExample(),
+      home: ButtonsExample(),
       //home: tab_bar(),
       //home: whatsapp(),
       //home: task_whatsapp(),
-      home: login_page(),
+      //home: login_page(),
     );
   }
 }
