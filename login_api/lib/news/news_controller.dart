@@ -12,13 +12,14 @@ class NewsController extends GetxController{
     try{
       isLoading.value=true;
       final respo=await api.news();
-      if(respo.totalArticles == 7197){
+      if(respo.information!.realTimeArticles!.message.toString().isNotEmpty){
         NewData.value=respo.articles ?? [];
-        isLoading.value=false;
+
       }
       else{
-        
+        throw "Error!!!";
       }
+      isLoading.value=false;
     }catch(e){}
   }
 }

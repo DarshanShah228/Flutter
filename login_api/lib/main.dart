@@ -3,6 +3,7 @@ import 'package:login_api/Tree_plant/tree_model.dart';
 import 'package:login_api/login_screen.dart';
 
 import 'Tree_plant/tree_screen.dart';
+import 'news/new_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: TreeScreen(),
+      home: NewScreen(),
     );
   }
 }
