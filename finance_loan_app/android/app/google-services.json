@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "799188469392",
+    "project_id": "auth-258d4",
+    "storage_bucket": "auth-258d4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799188469392:android:a2a8214f2fd51ac4baba15",
+        "android_client_info": {
+          "package_name": "com.LJU.finance_loan_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWWQxm07F_tk4aEq9ZLeeBWjGo4aR6DWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
