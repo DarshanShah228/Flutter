@@ -1,8 +1,23 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'Apply_loan.dart';
 
-void main() {
+// void main() {
+//   runApp(const MyApp());
+// }
+
+//Used for FireBase
+Future<void>main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+        apiKey: "AIzaSyAWWQxm07F_tk4aEq9ZLeeBWjGo4aR6DWc",
+        appId: "",
+        messagingSenderId: "",
+        projectId: "auth-258d4"
+    )
+  );
   runApp(const MyApp());
 }
 
