@@ -1,11 +1,24 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:login_api/Tree_plant/tree_model.dart';
 import 'package:login_api/login_screen.dart';
 
 import 'Tree_plant/tree_screen.dart';
+import 'firebase/login_screen.dart';
 import 'news/new_screen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: 'AIzaSyBhNnP4ZSUoYOAKiFYHiM78_UDyV7atA88',
+      appId: '1:799188469392:web:a1639ebb84f70f61baba15',
+      messagingSenderId: '799188469392',
+      projectId: 'auth-258d4',
+    ),
+  );
+
   runApp(const MyApp());
 }
 
@@ -35,7 +48,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: NewScreen(),
+      home: LoginScreenFirebase(),
     );
   }
 }
