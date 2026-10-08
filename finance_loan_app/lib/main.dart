@@ -2,6 +2,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'Apply_loan.dart';
+import 'Personal_information.dart';
+import 'RecentTransation_Navbar.dart';
+import 'loan_breakdown.dart';
 
 // void main() {
 //   runApp(const MyApp());
@@ -47,7 +50,10 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ApplyLoan(),
+      //home: ApplyLoan(),
+      //home: loan_breakdown(),
+      //home: PersonalInformation(),
+      home: RecenttransationNavbar(),
     );
   }
 }
