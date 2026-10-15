@@ -5,6 +5,7 @@ import 'Apply_loan.dart';
 import 'Personal_information.dart';
 import 'RecentTransation_Navbar.dart';
 import 'loan_breakdown.dart';
+import 'navbar.dart';
 
 // void main() {
 //   runApp(const MyApp());
@@ -53,7 +54,8 @@ class MyApp extends StatelessWidget {
       //home: ApplyLoan(),
       //home: loan_breakdown(),
       //home: PersonalInformation(),
-      home: RecenttransationNavbar(),
+      //home: RecenttransationNavbar(),
+      home: navbar(),
     );
   }
 }
